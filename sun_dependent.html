@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>SangEES - Sun-Dependent Energy Solutions</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+        background-color: #fff;
+        color: #333;
+    }
+    header {
+        background-color: white;
+        text-align: center;
+        padding: 1rem;
+    }
+    header h1:first-child {
+        color: orange;
+        font-size: 2.5rem;
+        margin-bottom: 0.2rem;
+    }
+    header h1:nth-child(2) {
+        color: green;
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-top: 0;
+    }
+    img.logo {
+        max-width: 200px;
+        height: auto;
+        margin-top: 0.5rem;
+    }
+    nav {
+        background-color: #FFB347;
+        padding: 0 1rem;
+        display: flex;
+        align-items: center; /* vertical center */
+        justify-content: center; /* center nav links horizontally */
+        height: 50px;
+        position: relative;
+    }
+    nav .nav-links {
+        display: flex;
+        gap: 1rem;
+    }
+    nav a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+        line-height: 50px;
+    }
+    nav a:hover {
+        text-decoration: underline;
+    }
+    /* Hamburger menu styles */
+    .hamburger {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+        width: 25px;
+        height: 20px;
+        justify-content: space-between;
+        position: absolute;
+        left: 15px;
+        top: 15px;
+        user-select: none;
+    }
+    .hamburger div {
+        height: 3px;
+        background-color: #333;
+        border-radius: 2px;
+    }
+    main {
+        max-width: 1200px;
+        margin: auto;
+        padding: 2rem;
+        display: flex;
+        gap: 2rem;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+    .content {
+        flex: 1 1 60%;
+        min-width: 280px;
+    }
+    .images {
+        flex: 1 1 35%;
+        min-width: 250px;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .images img {
+        width: 100%;
+        height: auto;
+        border-radius: 6px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+    h2, h3 {
+        color: orange;
+        font-weight: bold;
+    }
+    .energy-type {
+        color: green;
+        font-weight: bold;
+    }
+    footer {
+        background-color: transparent;
+        color: #333;
+        text-align: center;
+        padding: 1rem;
+        width: 100%;
+        margin-top: 3rem;
+        font-size: 0.9rem;
+    }
+    footer p {
+        margin: 0.3rem 0;
+    }
+    img.logo-footer {
+        max-width: 120px;
+        height: auto;
+        margin: 0.5rem auto;
+        display: block;
+    }
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
+        header h1:first-child {
+            font-size: 1.8rem;
+        }
+        header h1:nth-child(2) {
+            font-size: 1rem;
+        }
+        nav .nav-links {
+            display: none;
+            position: absolute;
+            top: 50px;
+            right: 0;
+            background: #FFB347;
+            flex-direction: column;
+            width: 100%;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        nav .nav-links.active {
+            display: flex;
+        }
+        nav a {
+            display: block;
+            margin: 0.5rem 0;
+            line-height: normal;
+        }
+        main {
+            flex-direction: column;
+            padding: 1rem;
+        }
+        .content, .images {
+            flex: 1 1 100%;
+        }
+        .hamburger {
+            display: flex;
+            position: absolute;
+            left: 15px; /* keep hamburger left aligned on mobile */
+            top: 15px;
+        }
+    }
+</style>
+</head>
+<body>
+<header>
+    <h1>SangEES – Engineering and Energy Solutions</h1>
+    <h1>Where Engineering Meets Energy Innovation</h1>
+    <img src="./Logo.png" alt="SangEES Logo" class="logo" />
+</header>
+<nav>
+    <!-- Hamburger button -->
+    <div class="hamburger" id="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <!-- Navigation links -->
+    <div class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="process_particle.html">Process and Particle Engineering</a>
+        <a href="pharmaceutical.html">Pharmaceutical Engineering</a>
+        <a href="mines_minerals.html">Mines and Minerals</a>
+        <a href="sun_dependent.html">Sun-Dependent Energy Solutions</a>
+        <a href="sun_independent.html">Sun-Independent Energy Solutions</a>
+    </div>
+</nav>
+<main>
+    <div class="content">
+        <h2>Sun-Dependent Energy Solutions</h2>
+        <p>SangEES designs sun-powered systems for clean, renewable energy deployment.</p>
+        <h3>Energy Types:</h3>
+        <ul>
+            <li><span class="energy-type">Solar:</span> PV, solar thermal, storage systems</li>
+            <li><span class="energy-type">Wind:</span> site analysis, turbine integration, hybrid grids</li>
+            <li><span class="energy-type">Hydro:</span> small hydro &amp; run-of-river designs</li>
+            <li><span class="energy-type">Waves &amp; Tidal:</span> coastal energy feasibility</li>
+        </ul>
+        <h3>Services:</h3>
+        <ul>
+            <li>Site/resource analysis</li>
+            <li>Feasibility and simulation (PV*Sol, HOMER)</li>
+            <li>Environmental review</li>
+        </ul>
+        <h3>Why SangEES?</h3>
+        <ul>
+            <li>Engineering-rooted sustainability</li>
+            <li>Fast prototyping: shortening the path from R&D to production</li>
+            <li>Regional customization</li>
+            <li>Technical + economic evaluation</li>
+        </ul>
+    </div>
+    <div class="images">
+        <img src="./Sun-Dependent Image 1.png" alt="Sun-Dependent Image 1" />
+        <img src="./Sun-Dependent Image 2.png" alt="Sun-Dependent Image 2" />
+        <img src="./Sun-Dependent Image 3.png" alt="Sun-Dependent Image 3" />
+    </div>
+</main>
+<footer>
+    <p>Contact us: <a href="mailto:sangees@protonmail.com">sangees@protonmail.com</a></p>
+    <img src="./Logo.png" alt="SangEES Logo" class="logo-footer" />
+    <p>&copy; 2025 SangEES. All rights reserved.</p>
+</footer>
+
+<script>
+  // Hamburger toggle script
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>
+</body>
+</html>

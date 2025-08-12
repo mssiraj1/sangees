@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>SangEES - Process and Particle Engineering</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0; 
+        padding: 0; 
+        line-height: 1.6;
+    }
+    header {
+        background-color: white;
+        color: black;
+        text-align: center;
+        padding: 1rem;
+    }
+    header h1:first-of-type {
+        color: orange;
+        font-size: 2rem;
+        margin-bottom: 0.25rem;
+    }
+    header h1:last-of-type {
+        color: green;
+        font-size: 1.2rem;
+        margin-top: 0;
+    }
+    img.logo {
+        max-width: 200px;
+        height: auto;
+        margin-top: 0.5rem;
+    }
+
+    nav {
+        background-color: #FFB347;
+        padding: 0 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        position: relative;
+    }
+    nav .nav-links {
+        display: flex;
+        gap: 1.5rem;
+    }
+    nav .nav-links a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+        font-size: 1rem;
+        line-height: 50px;
+    }
+    nav .nav-links a:hover {
+        text-decoration: underline;
+    }
+
+    .hamburger {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+        width: 25px;
+        height: 20px;
+        justify-content: space-between;
+        position: absolute;
+        left: 15px;
+        top: 15px;
+        user-select: none;
+    }
+    .hamburger div {
+        height: 3px;
+        background-color: #333;
+        border-radius: 2px;
+    }
+
+    main {
+        max-width: 1200px;
+        margin: auto;
+        padding: 2rem;
+        display: flex;
+        gap: 2rem;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+    .content {
+        flex: 1 1 60%;
+        min-width: 280px;
+    }
+    .images {
+        flex: 1 1 35%;
+        min-width: 250px;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .images img {
+        width: 100%;
+        height: auto;
+        border-radius: 6px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+    h2, h3 {
+        color: orange;
+        font-weight: bold;
+    }
+    footer {
+        background-color: transparent;
+        color: #333;
+        text-align: center;
+        padding: 1rem;
+        width: 100%;
+        margin-top: 3rem;
+    }
+    img.logo-footer {
+        max-width: 120px;
+        height: auto;
+        margin: 0.5rem auto;
+        display: block;
+    }
+
+    @media (max-width: 768px) {
+        header h1:first-of-type {
+            font-size: 1.5rem;
+        }
+        header h1:last-of-type {
+            font-size: 1rem;
+        }
+        main {
+            padding: 1rem;
+            flex-direction: column;
+        }
+        .content, .images {
+            flex: 1 1 100%;
+        }
+        .images {
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        .images img {
+            flex: 1 1 calc(50% - 0.5rem);
+        }
+        nav .nav-links {
+            display: none;
+            position: absolute;
+            top: 50px;
+            left: 0;
+            width: 100%;
+            background-color: #FFB347;
+            flex-direction: column;
+            padding: 1rem 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            z-index: 1000;
+        }
+        nav .nav-links.show {
+            display: flex;
+        }
+        nav .nav-links a {
+            font-size: 1.2rem;
+            margin: 0.5rem 0;
+            line-height: normal;
+        }
+        .hamburger {
+            display: flex;
+            position: absolute;
+            left: 15px;
+            top: 15px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        header h1:first-of-type {
+            font-size: 1.25rem;
+        }
+        header h1:last-of-type {
+            font-size: 0.9rem;
+        }
+        .images img {
+            flex: 1 1 100%;
+        }
+    }
+</style>
+</head>
+<body>
+<header>
+    <h1>SangEES – Engineering and Energy Solutions</h1>
+    <h1>Where Engineering Meets Energy Innovation</h1>
+    <img src="./Logo.png" alt="SangEES Logo" class="logo" />
+</header>
+<nav>
+    <div class="hamburger" id="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="process_particle.html">Process and Particle Engineering</a>
+        <a href="pharmaceutical.html">Pharmaceutical Engineering</a>
+        <a href="mines_minerals.html">Mines and Minerals</a>
+        <a href="sun_dependent.html">Sun-Dependent Energy Solutions</a>
+        <a href="sun_independent.html">Sun-Independent Energy Solutions</a>
+    </div>
+</nav>
+<main>
+    <div class="content">
+        <h2>Process and Particle Engineering</h2>
+        <p>At SangEES, we apply cutting-edge particle and process engineering principles to solve complex engineering problems...</p>
+        <h3>Key Areas of Expertise:</h3>
+        <ul>
+            <li>Powder Processing: flow analysis, hopper design, drying & blending</li>
+            <li>Granulation: wet & dry techniques, scale-up, PSD control</li>
+            <li>Modeling: DEM & CFD for real-world system simulation</li>
+            <li>Advanced Predictive Modeling: Large-scale real-world and high-fidelity DEM & CFD, accelerated by proprietary AI algorithms</li>
+            <li>Scale-Up: fluid beds, mills, mixers</li>
+        </ul>
+        <h3>Applications:</h3>
+        <ul>
+            <li>Pharmaceuticals, Construction, Chemicals, Food, Mining</li>
+        </ul>
+        <h3>Our services include:</h3>
+        <ol>
+            <li>Consultation</li>
+            <li>Characterization</li>
+            <li>Simulation</li>
+            <li>Pilot Testing</li>
+            <li>Implementation</li>
+        </ol>
+        <h3>Why SangEES?</h3>
+        <ul>
+            <li>20+ years of experience</li>
+            <li>Experimental + modeling capability</li>
+            <li>Sector-spanning solutions</li>
+            <li>Rapid virtual prototyping: Our AI-accelerated platform provides much faster prototypes compared to traditional DEM</li>
+        </ul>
+    </div>
+    <div class="images">
+        <img src="./Process Image 1.png" alt="Process Image 1" />
+        <img src="./Process Image 2.png" alt="Process Image 2" />
+    </div>
+</main>
+<footer>
+    <p>Contact us: <a href="mailto:sangees@protonmail.com">sangees@protonmail.com</a></p>
+    <img src="./Logo.png" alt="SangEES Logo" class="logo-footer" />
+    <p>&copy; 2025 SangEES. All rights reserved.</p>
+</footer>
+<script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+    });
+</script>
+</body>
+</html>

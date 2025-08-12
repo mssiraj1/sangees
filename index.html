@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SangEES - Overview</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #fff;
+            color: #333;
+        }
+        header {
+            background-color: #fff;
+            text-align: center;
+            padding: 1rem;
+        }
+        header h1:first-of-type {
+            color: orange;
+            font-size: 2.5rem;
+            margin-bottom: 0.2rem;
+        }
+        header h1:last-of-type {
+            color: green;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-top: 0;
+        }
+        nav {
+            background-color: #FFB347;
+            padding: 0 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Center navbar links horizontally */
+            height: 50px;
+            position: relative;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 1.5rem;
+        }
+        nav ul li {
+            display: inline-block;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-size: 1rem;
+            line-height: 50px;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            width: 25px;
+            height: 20px;
+            justify-content: space-between;
+            position: absolute; /* position hamburger absolute */
+            left: 15px;          /* keep it on the left */
+            top: 15px;
+            user-select: none;
+        }
+        .hamburger div {
+            height: 3px;
+            background-color: #333;
+            border-radius: 2px;
+        }
+        main {
+            max-width: 1200px;
+            margin: auto;
+            padding: 2rem;
+        }
+        h3 {
+            color: orange;
+            font-weight: bold;
+            font-size: 1.6rem;
+        }
+        .content-wrapper {
+            display: flex;
+            gap: 2rem;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+        .text-content {
+            flex: 1 1 60%;
+            min-width: 300px;
+        }
+        .text-content p {
+            text-align: justify;
+        }
+        .animations {
+            flex: 1 1 35%;
+            min-width: 280px;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        .framed {
+            border: 2px solid #333;
+            border-radius: 8px;
+            box-shadow: 0 0 8px rgba(0,0,0,0.2);
+        }
+        .animations video {
+            width: 100%;
+            animation: float 4s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .bottom-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+        .article-link {
+            max-width: 600px;
+            font-size: 1.1rem;
+            color: #333;
+            order: 0;
+        }
+        .article-link a {
+            color: blue;
+            text-decoration: underline;
+        }
+        .overview-image {
+            max-width: 400px;
+            width: 100%;
+            order: 1;
+        }
+        footer {
+            background-color: transparent;
+            color: #333;
+            text-align: center;
+            padding: 1rem;
+            width: 100%;
+        }
+        img.logo {
+            max-width: 200px;
+            height: auto;
+            margin-top: 0.5rem;
+        }
+        img.logo-footer {
+            max-width: 120px;
+            height: auto;
+            margin-top: 0.5rem;
+        }
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            header h1:first-of-type {
+                font-size: 1.8rem;
+            }
+            header h1:last-of-type {
+                font-size: 1rem;
+            }
+            main {
+                padding: 1rem;
+            }
+            .text-content,
+            .animations,
+            .article-link,
+            .overview-image {
+                flex: 1 1 100%;
+                max-width: 100%;
+            }
+            nav ul {
+                flex-direction: column;
+                display: none;
+                background-color: #FFB347;
+                position: absolute;
+                top: 50px;
+                right: 0;
+                width: 100%;
+                padding: 1rem 0;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+                z-index: 1000;
+            }
+            nav ul.show {
+                display: flex;
+            }
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+            nav ul li a {
+                font-size: 1.2rem;
+                line-height: normal;
+            }
+            .hamburger {
+                display: flex;
+                left: 15px;  /* keep hamburger on left on mobile */
+                position: absolute;
+                top: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SangEES – Engineering and Energy Solutions</h1>
+        <h1>Where Engineering Meets Energy Innovation</h1>
+        <img src="./Logo.png" alt="SangEES Logo" class="logo" />
+    </header>
+    <nav>
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <ul id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="process_particle.html">Process and Particle Engineering</a></li>
+            <li><a href="pharmaceutical.html">Pharmaceutical Engineering</a></li>
+            <li><a href="mines_minerals.html">Mines and Minerals</a></li>
+            <li><a href="sun_dependent.html">Sun-Dependent Energy Solutions</a></li>
+            <li><a href="sun_independent.html">Sun-Independent Energy Solutions</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="content-wrapper">
+            <div class="text-content">
+                <h3>Who We Are?</h3>
+                <p>The name SangEES means “friends”, reflecting our belief that true innovation begins with strong, trustworthy relationships. As a technological company at the forefront of engineering and energy solutions, we see ourselves not just as service providers, but as reliable partners and friends to our clients. We work hand in hand to understand their goals, solve their challenges, and deliver cutting-edge solutions that empower progress. At SangEES, technology meets trust — and every project becomes a shared journey toward success.</p>
+                
+                <h3>What We Do?</h3>
+                <p>We provide cutting-edge solutions in the following areas:</p>
+                <ol>
+                    <li><strong>Engineering Solutions</strong>
+                        <ul>
+                            <li><a href="process_particle.html">Process and Particle Engineering</a></li>
+                            <li><a href="pharmaceutical.html">Pharmaceutical Engineering</a></li>
+                            <li><a href="mines_minerals.html">Mines and Minerals</a></li>
+                        </ul>
+                    </li>
+                    <li><strong>Energy Solutions</strong>
+                        <ul>
+                            <li><a href="sun_dependent.html">Sun-dependent energy solutions</a></li>
+                            <li><a href="sun_independent.html">Sun-independent energy solutions</a></li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <h3>
+                    <span style="color: orange;">Our Technological Edge:</span><br>
+                    <span style="color: green;">AI-Accelerated Computational Modeling</span>
+                </h3>
+                <p style="text-align: justify;">
+                    At the heart of SangEES’s solutions lies a cutting-edge computational platform. We integrate proprietary Artificial Intelligence and Machine Learning models with traditional physics-based simulations, such as the Discrete Element Method (DEM). This unique approach enables us to solve problems at a scale and speed previously unattainable, providing our clients with faster, more accurate, and cost-effective insights into their most complex engineering challenges.
+                </p>
+            </div>
+
+            <div class="animations">
+                <video src="./Animation 1.mp4" autoplay loop muted playsinline class="framed"></video>
+                <video src="./Animation 2.mp4" autoplay loop muted playsinline class="framed"></video>
+            </div>
+        </div>
+
+        <div class="bottom-wrapper">
+            <p class="article-link">
+                If you're interested in understanding the broader energy landscape and its importance for our planet’s future, please read a thought-provoking article by our Founder and CEO. 
+                <a href="https://www.sciencedirect.com/science/article/pii/S1364032112000317" target="_blank" rel="noopener noreferrer">Link to article</a>
+            </p>
+            <img src="./Overview Image.png" alt="Overview Image" class="overview-image framed" />
+        </div>
+    </main>
+    <footer>
+        <p>Contact us: <a href="mailto:sangees@protonmail.com">sangees@protonmail.com</a></p>
+        <img src="./Logo.png" alt="SangEES Logo" class="logo-footer" />
+        <p>&copy; 2025 SangEES. All rights reserved.</p>
+    </footer>
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>
