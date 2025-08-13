@@ -1,52 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Home Page -->
-  <url>
-    <loc>https://sangees.com/</loc>
-    <lastmod>2025-08-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-  <!-- Process and Particle Engineering -->
-  <url>
-    <loc>https://sangees.com/process-particle-engineering</loc>
-    <lastmod>2025-08-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Pharmaceutical Engineering -->
-  <url>
-    <loc>https://sangees.com/pharmaceutical-engineering</loc>
-    <lastmod>2025-08-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Mines and Minerals -->
-  <url>
-    <loc>https://sangees.com/mines-minerals</loc>
-    <lastmod>2025-08-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Sun-Dependent Energy Solutions -->
-  <url>
-    <loc>https://sangees.com/sun-dependent-energy-solutions</loc>
-    <lastmod>2025-08-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Sun-Independent Energy Solutions -->
-  <url>
-    <loc>https://sangees.com/sun-independent-energy-solutions</loc>
-    <lastmod>2025-08-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
+    <url>
+        <loc>https://www.example.com/sun_dependent.html</loc>
+        <lastmod>2025-08-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.example.com/sun_independent.html</loc>
+        <lastmod>2025-08-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.example.com/index.html</loc>
+        <lastmod>2025-08-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.example.com/mines_minerals.html</loc>
+        <lastmod>2025-08-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.example.com/pharmaceutical.html</loc>
+        <lastmod>2025-08-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.example.com/process_particle.html</loc>
+        <lastmod>2025-08-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
 </urlset>
