@@ -1031,14 +1031,3 @@
                 top: 15px;
             }
         }
-
-/* Remove orange tap highlight on mobile for all interactive elements */
-a, button, .hamburger, [role="button"], input, textarea, select {
-    -webkit-tap-highlight-color: transparent;
-}
-
-/* Optional: Improve touch feedback (replace with your preferred style) */
-.hamburger:active {
-    opacity: 0.8; /* Subtle feedback instead of orange highlight */
-}
-    
